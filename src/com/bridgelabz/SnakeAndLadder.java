@@ -4,12 +4,14 @@ import java.util.Random;
 
 public class SnakeAndLadder {
     public static void main(String[] args) {
+        int count=0;
         int playerPosition = 0;
         System.out.println("Player at start position " + playerPosition);
 
         int rollDice = (int) (Math.floor(Math.random() * 10) % 6 + 1);
 
         while (playerPosition != 100) {
+            count++;
             System.out.println("Player roll the die to get number is " + rollDice);
 
             Random random = new Random();
@@ -38,6 +40,10 @@ public class SnakeAndLadder {
                     break;
             }
         }
+        System.out.println("------------------------------------------------------------------");
+        System.out.println("Congratulations, you won the game!!!");
+        System.out.println("------------------------------------------------------------------");
+        System.out.println("Count time : "+count);
 
     }
 }
